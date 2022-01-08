@@ -1,0 +1,63 @@
+#Check if this is in a private chat, then return true.
+
+    # [CALENDAR-START]
+    # Credits to from github.com/unmonoqueteclea/calendar-telegram
+    #
+    # Copyright (c) 2016 unmonoqueteclea
+
+    # Permission is hereby granted, free of charge, to any person obtaining a copy
+    # of this software and associated documentation files (the "Software"), to deal
+    # in the Software without restriction, including without limitation the rights
+    # to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    # copies of the Software, and to permit persons to whom the Software is
+    # furnished to do so, subject to the following conditions:
+
+    # The above copyright notice and this permission notice shall be included in all
+    # copies or substantial portions of the Software.
+
+    # THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    # IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    # FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    # AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    # SOFTWARE.
+
+    # CALENDAR_CALLBACK = "CALENDAR"
+
+    # def create_callback_data(action,year,month,day):
+    #     """ Create the callback data associated to each button"""
+    #     return CALENDAR_CALLBACK + ";" + ";".join([action,str(year),str(month),str(day)])
+
+    # now = datetime.datetime.now()
+    # year = now.year
+    # month = now.month
+    # data_ignore = create_callback_data("IGNORE", year, month, 0)
+    # keyboard = []
+    # #First row - Month and Year
+    # row=[]
+    # row.append(InlineKeyboardButton(calendar.month_name[month]+" "+str(year),callback_data=data_ignore))
+    # keyboard.append(row)
+    # #Second row - Week Days
+    # row=[]
+    # for day in ["Mo","Tu","We","Th","Fr","Sa","Su"]:
+    #     row.append(InlineKeyboardButton(day,callback_data=data_ignore))
+    # keyboard.append(row)
+
+    # my_calendar = calendar.monthcalendar(year, month)
+    # for week in my_calendar:
+    #     row=[]
+    #     for day in week:
+    #         if(day==0):
+    #             row.append(InlineKeyboardButton(" ",callback_data=data_ignore))
+    #         else:
+    #             row.append(InlineKeyboardButton(str(day),callback_data=create_callback_data("DAY",year,month,day)))
+    #     keyboard.append(row)
+    # #Last row - Buttons
+    # row=[]
+    # row.append(InlineKeyboardButton("<",callback_data=create_callback_data("PREV-MONTH",year,month,day)))
+    # row.append(InlineKeyboardButton(" ",callback_data=data_ignore))
+    # row.append(InlineKeyboardButton(">",callback_data=create_callback_data("NEXT-MONTH",year,month,day)))
+    # keyboard.append(row)
+
+    # # [CALENDAR-END]
